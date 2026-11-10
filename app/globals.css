@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-paper: oklch(0.992 0.002 250);
+  --color-card: oklch(1 0 0);
+  --color-tint: oklch(0.962 0.01 250);
+  --color-line: oklch(0.895 0.012 250);
+  --color-ink: oklch(0.25 0.025 255);
+  --color-muted: oklch(0.44 0.022 255);
+  --color-brand: oklch(0.33 0.09 256);
+  --color-brand-dark: oklch(0.27 0.08 256);
+  --color-brand-soft: oklch(0.93 0.025 250);
+  --color-cta: oklch(0.81 0.155 76);
+  --color-cta-dark: oklch(0.76 0.155 72);
+  --color-on-cta: oklch(0.24 0.05 256);
+  --color-star: oklch(0.74 0.16 75);
+  --font-sans: var(--font-body-src), system-ui, sans-serif;
+  --font-serif: var(--font-head-src), Georgia, serif;
+}
+
+:root { --ease-out: cubic-bezier(0.23, 1, 0.32, 1); }
+html { background: var(--color-paper) !important; scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { background: var(--color-paper) !important; color: var(--color-ink); font-family: var(--font-sans); font-size: 1.15rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 700; color: var(--color-brand-dark); text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.45rem); line-height: 1.14; letter-spacing: -0.015em; }
+h2 { font-size: clamp(1.7rem, 2.9vw, 2.4rem); line-height: 1.2; letter-spacing: -0.01em; }
+h3 { font-size: 1.16rem; line-height: 1.35; }
+p { text-wrap: pretty; }
+
+.btn { transition: transform 160ms var(--ease-out), background-color 160ms ease; touch-action: manipulation; }
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--color-brand); outline-offset: 3px; border-radius: 8px; }
+.on-brand a:focus-visible { outline-color: white; }
+@media (scripting: enabled) {
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out); }
+  .reveal.in { opacity: 1; transform: none; }
+}
+details summary { list-style: none; cursor: pointer; }
+details summary::-webkit-details-marker { display: none; }
+details .faq-icon { transition: transform 200ms var(--ease-out); }
+details[open] .faq-icon { transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+  .btn, details .faq-icon { transition: none; }
+}
