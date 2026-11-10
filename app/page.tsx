@@ -37,7 +37,7 @@ const faqs = [
   { q: "Where are you located?", a: "8110 Freeport Blvd in South Sacramento. Customers come to us from the Pocket, Greenhaven, Freeport and across the Sacramento area." },
   { q: "What kinds of vehicles do you work on?", a: "All makes and models. Call with the year and model if you want to check before you come in." },
   { q: "Do you work on transmissions?", a: "Yes. Transmissions and brakes are our specialties, and owner Tracy Oto has been working on them in Sacramento since 1990." },
-  { q: "Can I get a second opinion on a quote?", a: "Yes, customers do it all the time. Bring the quote and your car and we will tell you honestly what we find." },
+  { q: "Can I get a second opinion on a quote?", a: "Yes. Bring the quote and your car and we will tell you honestly what we find." },
   { q: "Can you see my car the same day?", a: "It depends on the day. Call first at " + PHONE + ". When the schedule allows, we fit people in." },
   { q: "How do you say the name?", a: "Oh-toe. If you get it wrong, we will still fix your car." },
 ];
@@ -184,7 +184,7 @@ export default function Home() {
               <h2>The same shop on Freeport Blvd since 1990</h2>
               <div className="mt-5 max-w-[60ch] space-y-4">
                 <p>Mr. Tracy Oto opened this shop in 1990, and he has built its name on transmissions, brakes and telling people the truth about their cars.</p>
-                <p>South Sacramento has been coming back ever since. Some customers have been bringing their cars here for decades, and now their kids do too. Others just live down the street and are glad they do.</p>
+                <p>South Sacramento has been coming back ever since. Some customers have been bringing their cars here for decades. Others just live down the street and are glad they do.</p>
                 <p>Ask anyone who has been here and you will hear the same thing: he tells you what is wrong, what it costs, and what he would do if it were his own car. Nothing fancy. Just good work from someone who cares whether you got treated right.</p>
               </div>
             </div>
